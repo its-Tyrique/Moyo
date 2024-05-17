@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greyhound - South Africa</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        .navbar {
+            background-color: #751B25;
+        }
+        .navbar-brand, .nav-link {
+            color: #F1FCFC !important;
+        }
+        .nav-link:hover {
+            color: #D89098 !important;
+        }
+        .navbar-toggler {
+            border-color: #F1FCFC; /* Border color of the hamburger icon */
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23F1FCFC' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+        .hero-section {
+            background-image: url('path/to/your/image.jpg'); /* Replace with the correct path to your image */
+            background-size: cover;
+            background-position: center;
+            height: calc(100vh - 56px - 40px); /* Full height minus navbar height and footer height */
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(117, 27, 37, 0.6); /* Dark overlay with the primary color */
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-content h1 {
+            color: #F4D0D3;
+        }
+        .hero-content p {
+            color: #D89098;
+        }
+        .search-form {
+            background-color: #F1FCFC;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 100%;
+        }
+        .search-form .form-control, .search-form .btn {
+            border-radius: 0;
+        }
+        .btn-primary {
+            background-color: #91404A;
+            border-color: #91404A;
+        }
+        .btn-primary:hover {
+            background-color: #751B25;
+            border-color: #751B25;
+        }
+        .footer {
+            background-color: #751B25;
+            color: #F1FCFC;
+            padding: 10px 0;
+            text-align: center;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#"><img src="path/to/logo1.png" alt="Logo" class="img-fluid" style="max-height: 50px;"> Greyhound</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Reservations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Members</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="display-4">Luxury Meets Affordability</h1>
+        <p class="lead">South Africa's Favourite Luxury Coach Solution</p>
+        <div class="search-form container mt-4">
+            <form class="row">
+                <div class="col-md-3 mb-2 mb-md-0">
+                    <select class="form-control">
+                        <option>Pickup</option>
+                        <option>Johannesburg</option>
+                        <option>Cape Town</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="col-md-3 mb-2 mb-md-0">
+                    <select class="form-control">
+                        <option>Drop-Off</option>
+                        <option>Johannesburg</option>
+                        <option>Cape Town</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="col-md-2 mb-2 mb-md-0">
+                    <input type="number" class="form-control" placeholder="Seats">
+                </div>
+                <div class="col-md-2 mb-2 mb-md-0">
+                    <input type="date" class="form-control" placeholder="Pickup Date">
+                </div>
+                <div class="col-md-2 mb-2 mb-md-0">
+                    <input type="date" class="form-control" placeholder="Return Date">
+                </div>
+                <div class="col-md-1">
+                    <button type="submit" class="btn btn-primary btn-block">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>BOOKINGS@GREYHOUND.CO.ZA | 011 611 8000</p>
+        <p>
+            <a href="#"><img src="path/to/facebook-icon.png" alt="Facebook" class="img-fluid" style="max-height: 20px;"></a>
+            <a href="#"><img src="path/to/twitter-icon.png" alt="Twitter" class="img-fluid" style="max-height: 20px;"></a>
+            <a href="#"><img src="path/to/instagram-icon.png" alt="Instagram" class="img-fluid" style="max-height: 20px;"></a>
+        </p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
