@@ -1,0 +1,17 @@
+body {
+    background-color: #F1FCFC;
+}
+.register-container {
+    margin-top: 100px;
+}
+.form-control {
+    margin-bottom: 20px;
+}
+.btn-primary {
+    background-color: #91404A;
+    border-color: #91404A;
+}
+.btn-primary:hover {
+    background-color: #751B25;
+    border-color: #751B25;
+}
