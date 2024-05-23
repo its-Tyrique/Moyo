@@ -13,31 +13,67 @@
 
     <div class="container">
         <div class="row justify-content-center register-container">
-            <div class="col-md-4">
+            <div class="col-md-6 justify-content-centre">
+                <img src="#" class="logo" alt="Moyo Logo">
                 <h2 class="text-center"><a href="index.html">Register</a></h2>
                 <!-- register form -->
-                <form>
-                    <div class="form-group">
-                        <label for="fullname">Full Name</label>
-                        <input type="text" class="form-control" id="fullname" name="fullname" required>
+                <form role="form" id="registerForm" action="#" method="post">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+                            <div class="error-message text-danger" id="firstName-error"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+                            <div class="error-message text-danger" id="lastName-error"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="title">Title</label>
+                            <select class="form-control" id="title" name="title" required>
+                                <option>Select a Title</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Ms">Ms</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Dr">Dr</option>
+                            </select>
+                            <div class="error-message text-danger" id="title-error"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="idNumber">ID Number</label>
+                            <input type="text" class="form-control" id="idNumber" name="idNumber" placeholder="ID Number" required>
+                            <input type="hidden" id="gender" name="gender" value="">
+                            <input type="hidden" id="dateOfBirth" name="dateOfBirth" value="">
+                            <div class="error-message text-danger" id="idNumber-error"></div>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
+                        <label for="phone">Cellphone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Cellphone Number" required>
+                        <div class="error-message text-danger" id="phone-error"></div>
                     </div>
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                        <div class="error-message text-danger" id="email-error"></div>
                     </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
+                    <!-- TODO: Check show password functionality -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                            <div class="error-message text-danger" id="password-error"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                            <div class="error-message text-danger" id="confirmPassword-error"></div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    <button type="submit" class="btn btn-primary btn-block" id="registerButton">Sign Up</button>
                 </form>
                 <div class="text-center mt-3">
                     <a href="login.html">Already have an account? Login here</a>
@@ -47,7 +83,9 @@
     </div>
 
     <!--    Features Section    -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="../js/register.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

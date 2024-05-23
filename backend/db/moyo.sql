@@ -43,6 +43,13 @@ CREATE TABLE account (
         FOREIGN KEY (UserRole) REFERENCES user_role(Id) ON UPDATE CASCADE ON DELETE SET NULL
 );
 
+DROP TABLE IF EXISTS account;
+
+INSERT INTO account (
+    FirstName, LastName, Title, IdentificationNumber, MainContactNumber, EmailAddress, Password, Gender,
+    DateOfBirth, ProfilePicturePath, Username, UserRole
+) VALUES ('John', 'Doe', 'Mr', '123456789', '1234567890', 'john@example.com', 'hashed_password', 'Male',
+          '1990-01-01', '../assets/default_profile.jpg', 'john@example.com', 1);
 
 -- Create index on UserRole column
 CREATE INDEX UserRole ON account (UserRole);

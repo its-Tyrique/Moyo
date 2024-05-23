@@ -15,3 +15,6 @@ body {
     background-color: #751B25;
     border-color: #751B25;
 }
+button {
+    cursor: pointer;
+}
