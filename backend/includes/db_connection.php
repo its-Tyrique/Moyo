@@ -1,8 +1,8 @@
 <?php
-    $HostStr = "102.222.124.15";
-    $UserNameStr = "mymoyzdi_tyrique";
-    $PasswordStr = "^efn7E#&8[GA";
-    $DBNameStr = "mymoyzdi_moyo";
+    $HostStr = "";
+    $UserNameStr = "";
+    $PasswordStr = "";
+    $DBNameStr = "";
 
     $DBConnectObj = new mysqli($HostStr, $UserNameStr, $PasswordStr, $DBNameStr);
 
