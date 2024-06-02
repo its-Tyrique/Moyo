@@ -1,7 +1,17 @@
 body, html {
     height: 100%;
     margin: 0;
-    overflow: hidden; /* Prevent scrolling */
+}
+.top-navbar {
+    background-color: #91404A;
+    color: #F1FCFC;
+    padding: 0.5rem 1rem;
+    text-align: right;
+}
+.top-navbar a {
+    color: #F1FCFC;
+    margin-left: 15px;
+    text-decoration: none;
 }
 .navbar {
     background-color: #751B25;
