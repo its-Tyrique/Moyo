@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         // Redirect based on userRole
                         switch (response.userRole) {
                             case 1:
-                                window.location.href = "user/dashboard.php";
+                                window.location.href = "../pages/booking.html";
                                 break;
                             case 2:
                                 window.location.href = "admin/dashboard.php";

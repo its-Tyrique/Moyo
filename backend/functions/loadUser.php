@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     /** @var mysqli $DBConnectObj */
     require_once "../includes/db_connection.php";
 
@@ -36,6 +38,7 @@
                 // Create user session data array
                 $_SESSION['user'] = [
                     'Id' => $UserRow['Id'],
+                    'FullName' => $UserRow['FullName'],
                     'FirstName' => $UserRow['FirstName'],
                     'LastName' => $UserRow['LastName'],
                     'EmailAddress' => $UserRow['EmailAddress'],
