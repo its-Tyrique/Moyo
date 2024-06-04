@@ -17,9 +17,9 @@ $(document).ready(function() {
                 // Disable checkbox selection
                 // $('input[name="tripSelect"]').prop('disabled', true);
                 // Add event listener to show toast
-                $('input[name="tripSelect"]').on('click', function() {
-                    $('#loginToast').toast('show');
-                });
+                // $('input[name="tripSelect"]').on('click', function() {
+                //     $('#loginToast').toast('show');
+                // });
             }
         },
         error: function(xhr, status, error) {
@@ -31,8 +31,24 @@ $(document).ready(function() {
 
     const bookingForm = $('#bookingForm');
 
-    // Handle form submission
-    bookingForm.on('submit', function(event) {
+    $('#paymentModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var recipient = button.data('whatever'); // Extract info from data-* attributes (if you need to use data attributes)
+        var modal = $(this);
+        // You can update modal content here if needed
+        modal.find('.modal-title').text('Payment Details');
+        // Example of updating form input, if needed:
+        // modal.find('#card-number').val(recipient);
+    });
+
+    // Button click event
+
+    $('#bookTripBtn').on('click', function(event) {
+        event.preventDefault(); // Prevent default form submission if button is inside a form
+        $('#paymentModal').modal('show'); // Show the modal
+    });
+
+    $('#paymentBtn').on('click', function(event) {
         event.preventDefault();
 
         const selectedTrips = [];
@@ -149,6 +165,9 @@ function updateTotalPrice() {
 
     // Display total price
     $('#totalPrice').text(currencyFormatter.format(totalPrice));
+
+    // Display total price in the modal
+    $('#finalPaymentAmount').text(currencyFormatter.format(totalPrice));
 }
 
 // Event listener for trip selection change and ticket count change
@@ -158,4 +177,60 @@ $(document).on('change', 'input[name="tripSelect"], input[name^="ticketCount-"]'
 
 // Initial call to update total price when the page loads
 updateTotalPrice();
+
+
+$(document).ready(function() {
+    // Remove any existing click event handlers to prevent multiple bindings
+    $('#bookTripBtn').off('click');
+    $('#paymentBtn').off('click');
+
+    // Book Trip Button click event
+    $('#bookTripBtn').on('click', function(event) {
+        event.preventDefault();
+        updateTotalPrice();
+        $('#paymentModal').modal('show'); // Show the modal
+    });
+
+    // Payment Button click event
+    $('#paymentBtn').on('click', function(event) {
+        event.preventDefault();
+
+        const selectedTrips = [];
+        $('input[name="tripSelect"]:checked').each(function() {
+            let tripId = $(this).val();
+            console.log('tripId: ', tripId);
+            const ticketCount = $(`input[name="ticketCount-${tripId}"]`).val();
+            selectedTrips.push({ tripId, ticketCount });
+        });
+
+        console.log(selectedTrips);
+        $.ajax({
+            url: '../../backend/functions/bookTrip.php',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ trips: selectedTrips }),
+            success: function(response) {
+                if (response.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: 'Booking successful!',
+                        showConfirmButton: true,
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error!',
+                        text: 'Booking failed: ' + response.message,
+                        showConfirmButton: true
+                    });
+                }
+            },
+            error: function(error) {
+                console.error('Error booking trips:', error);
+                alert('An error occurred while booking the trips.');
+            }
+        });
+    });
+});
 

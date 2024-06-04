@@ -52,8 +52,9 @@
                 <!-- Trip rows will be populated here by JS -->
                 </tbody>
             </table>
+
             <div class="text-right">
-                <button type="submit" class="btn btn-primary">Book Selected Trips</button>
+                <button type="button" class="btn btn-primary" id="bookTripBtn" data-toggle="modal" data-target="#exampleModal" data-whatever="John Doe" >Book Selected Trips</button>
             </div>
         </form>
         <div class="mt-3">
@@ -62,15 +63,48 @@
         </div>
     </div>
 
-    <div class="toast" id="loginToast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-            <strong class="mr-auto">Login Required</strong>
-            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="toast-body">
-            Please login to your account before attempting to make a booking.
+    <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel">Payment Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="card-number">CARD NUMBER</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="card-number" placeholder="Valid Card Number">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="expiry-date">EXPIRY DATE</label>
+                                    <input type="text" class="form-control" id="expiry-date" placeholder="MM / YY">
+                                </div>
+                                <div class="col">
+                                    <label for="cv-code">CV CODE</label>
+                                    <input type="text" class="form-control" id="cv-code" placeholder="CV">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="final-payment">
+                            <span>Final Payment</span>
+                            <span id="finalPaymentAmount">0.00 ZAR</span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" id="paymentBtn">Pay</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 

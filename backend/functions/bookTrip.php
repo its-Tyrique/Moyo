@@ -10,7 +10,7 @@
 
         // Ensure the user is logged in
         if (!isset($_SESSION['user'])) {
-            die(json_encode(array("success" => false, "message" => "User not logged in")));
+            die(json_encode(array("success" => false, "message" => "Please login before booking a trip.")));
         }
 
         $inputData = json_decode(file_get_contents("php://input"), true);
