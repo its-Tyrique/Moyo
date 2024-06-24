@@ -35,7 +35,7 @@
                         <a href="bookings.php" class="nav-link">Bookings</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Logout</a>
+                        <a href="https://mymoyo.co.za/" class="nav-link">Logout</a>
                     </li>
 
                 </ul>

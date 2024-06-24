@@ -106,3 +106,4 @@ CREATE TABLE bookings (
                           FOREIGN KEY (Trip) REFERENCES trip(Id)
 );
 DROP TABLE IF EXISTS bookings;
+

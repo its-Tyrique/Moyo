@@ -35,10 +35,10 @@
                     <a href="trips.php" class="nav-link">Trips</a>
                 </li>
                 <li class="nav-item">
-                    <a href="bookings.php" class="nav-link">Bookings</a>
+                    <a href="bookings.php" class="flex-sm-fill text-sm-center nav-link active">Bookings</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Logout</a>
+                    <a href="https://mymoyo.co.za/" class="nav-link">Logout</a>
                 </li>
             </ul>
         </div>

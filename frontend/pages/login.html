@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Moyo</title>
+    <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/login.css" rel="stylesheet">
 </head>
@@ -14,19 +15,21 @@
     <div class="container">
         <div class="row justify-content-center login-container">
             <div class="col-md-4">
-<!--                <img src="../assets/images/logo.png" class="logo" alt="Moyo Logo">-->
+                <img src="../assets/logo.png" alt="Logo" class="img-fluid rounded-circle" alt="Moyo Logo">
                 <h2 class="text-center"><a href="index.html">Login</a></h2>
                 <!-- login form -->
-                <form>
+                <form id="loginForm">
                     <div class="form-group">
-                        <label for="username">Username or Email</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="error-message text-danger" id="email-error"></div>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" name="password" required>
+                        <div class="error-message text-danger" id="password-error"></div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    <button type="submit" class="btn btn-primary btn-block" id="loginButton">Login</button>
                 </form>
                 <div class="text-center mt-3">
                     <a href="register.html">Don't have an account? Register here</a>
@@ -36,9 +39,10 @@
     </div>
 
     <!--    Features Section    -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="../js/login.js"></script>
 </body>
 </html>

@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 dataType: "json",
                 contentType: "application/json",
                 success: function(response) {
+                    console.log('Data Sent via Ajax: ', formData)
+                    console.log('Data Sent via Ajax: ', response);
                     // Handle successful response from the server
                     if (response.success) {
                         // Redirect based on userRole
@@ -108,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                         // TODO: Add countdown for remaining time and login attempts
                     } else {
-
+                    console.log('Failed to login: ', response.message);
                     // Display error message from the server
                         Swal.fire({
                             icon: 'error',

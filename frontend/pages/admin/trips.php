@@ -12,7 +12,6 @@
 </head>
 
 <body>
-<body>
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
@@ -32,7 +31,7 @@
                     <a href="buses.php" class="nav-link">Buses</a>
                 </li>
                 <li class="nav-item">
-                    <a href="trips.php" class="nav-link">Trips</a>
+                    <a href="trips.php" class="flex-sm-fill text-sm-center nav-link active">Trips</a>
                 </li>
                 <li class="nav-item">
                     <a href="bookings.php" class="nav-link">Bookings</a>

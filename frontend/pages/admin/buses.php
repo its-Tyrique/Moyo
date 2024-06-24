@@ -29,7 +29,7 @@
                         <a href="users.php" class="nav-link">Users</a>
                     </li>
                     <li class="nav-item">
-                        <a href="buses.php" class="nav-link">Buses</a>
+                        <a href="buses.php" class="flex-sm-fill text-sm-center nav-link active">Buses</a>
                     </li>
                     <li class="nav-item">
                         <a href="trips.php" class="nav-link">Trips</a>
@@ -38,7 +38,7 @@
                         <a href="bookings.php" class="nav-link">Bookings</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Logout</a>
+                        <a href="https://mymoyo.co.za/" class="nav-link">Logout</a>
                     </li>
 
                 </ul>

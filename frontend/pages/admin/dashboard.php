@@ -22,7 +22,7 @@
                         <a href="#" class="navbar-brand">Moyo Admin</a>
                     </li>
                     <li class="nav-item">
-                        <a href="dashboard.php" class="nav-link">Dashboard</a>
+                        <a href="dashboard.php" class="flex-sm-fill text-sm-center nav-link active">Dashboard</a>
                     </li>
                     <li class="nav-item">
                         <a href="users.php" class="nav-link">Users</a>
@@ -37,7 +37,7 @@
                         <a href="bookings.php" class="nav-link">Bookings</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Logout</a>
+                        <a href="https://mymoyo.co.za/" class="nav-link">Logout</a>
                     </li>
 
                 </ul>
@@ -50,9 +50,23 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <!-- Todo: Remove Heading 1 -->
-                        <p>content goes here</p>
+                    <div class="col-md-6">
+                        <!-- Chart canvas -->
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Chart canvas for user trend -->
+                        <canvas id="userTrendChart"></canvas>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Chart canvas for bus capacity -->
+                        <canvas id="busCapacityChart"></canvas>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Chart canvas for revenue -->
+                        <canvas id="revenueChart"></canvas>
                     </div>
                 </div>
             </div>
@@ -63,6 +77,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../js/dashboard.js"></script><!-- Link to your JavaScript file -->
 </body>
 
 </html>
